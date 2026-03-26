@@ -1,4 +1,23 @@
+<script>// 取得所有的下拉按鈕
+var dropdown = document.getElementsByClassName("dropdown-btn");
 
+for (var i = 0; i < dropdown.length; i++) {
+  dropdown[i].addEventListener("click", function() {
+    // 切換按鈕本身的 active 狀態（可選，用來改顏色）
+    this.classList.toggle("active");
+
+    // 取得下一個兄弟元素（即 dropdown-container）
+    var dropdownContent = this.nextElementSibling;
+    
+    // 切換顯示與隱藏
+    if (dropdownContent.classList.contains("show-menu")) {
+      dropdownContent.classList.remove("show-menu");
+    } else {
+      dropdownContent.classList.add("show-menu");
+    }
+  });
+}
+</script>
 
 <style>
 html {
