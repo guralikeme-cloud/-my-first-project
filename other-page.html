@@ -118,6 +118,19 @@ div p {
     line-height: 2; 
     white-space: pre-wrap; 
  }
+  table {
+    width: 100%; /* 讓表格撐滿容器 */
+    table-layout: fixed; /* 強制每一欄寬度相等 */
+}
+
+td {
+    vertical-align: top; /* 讓內容都從頂端對齊 */
+    text-align: left;    /* 文字靠左對齊 */
+}
+
+iframe {
+    max-width: 100%;    /* 確保影片不會超出表格格子 */
+}
 
 </style>
 <html>
@@ -186,9 +199,7 @@ div p {
              eferrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
      </tr>
      <tr>
-       <td class='intro-box2'>在我16歲時，開始自我探索，也在此時有所迷茫。
-觀察在日常中所遇的人，思考所讀文本中的人們，而發現人有時候都走在成為他者模樣了路上，
-卻不知道自己的渴求，不知道所自己的願想。直到死亡卻都失卻了自己。</td>
+       <td class='intro-box2'>在我16歲時，開始自我探索，也在此時有所迷茫。觀察在日常中所遇的人，思考所讀文本中的人們，而發現人有時候都走在成為他者模樣了路上，卻不知道自己的渴求，不知道所自己的願想。直到死亡卻都失卻了自己。</td>
        <td class='intro-box2'></td>
      </tr>
    </table>
