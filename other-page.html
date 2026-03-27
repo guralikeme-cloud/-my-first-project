@@ -131,6 +131,36 @@ div p {
     letter-spacing: 5px;
     line-height: 2; 
     white-space: pre-wrap; 
+  }
+  table {
+    width: 100%; /* 讓表格撐滿容器 */
+    table-layout: fixed; /* 強制每一欄寬度相等 */
+}
+
+td {
+    vertical-align: top; /* 讓內容都從頂端對齊 */
+    text-align: left;    /* 文字靠左對齊 */
+}
+
+iframe {
+    max-width: 100%;    /* 確保影片不會超出表格格子 */
+}
+
+/* 影片容器：強制維持 16:9 比例並消除黑邊 */
+.video-container {
+  width: 100%;
+  aspect-ratio: 16 / 9; 
+  background-color: #000; /* 比例不符時顯示黑底 */
+  overflow: hidden;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+
 
 </style>
 <html>
@@ -175,12 +205,12 @@ div p {
   <h2 id="music">音樂推薦</h2>
    <table>
      <tr>
-       <td><iframe wight='560' height='315' src="https://www.youtube-nocookie.com/embed/a1dxsIeuDK0?si=ngrgaIBP5jcQ9UcH" 
+       <td><div class='video-container'><iframe wight='560' height='315' src="https://www.youtube-nocookie.com/embed/a1dxsIeuDK0?si=ngrgaIBP5jcQ9UcH" 
              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
-       <td><iframe src="https://www.youtube-nocookie.com/embed/zgi1UrfCLfc?si=Er80_wtXtNV2tph-" 
+             referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></td>
+       <td><div class='video-container'><iframe src="https://www.youtube-nocookie.com/embed/zgi1UrfCLfc?si=Er80_wtXtNV2tph-" 
              title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" r
-             eferrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></td>
+             eferrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div></td>
      </tr>
      <tr>
        <td class='intro-box2'>在我16歲時，開始自我探索，也在此時有所迷茫。觀察在日常中所遇的人，思考所讀文本中的人們，而發現人有時候都走在成為他者模樣了路上，卻不知道自己的渴求，不知道所自己的願想。直到死亡卻都失卻了自己。</td>
@@ -201,5 +231,3 @@ div p {
 
 </body>
 </html>
-
-
